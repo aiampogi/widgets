@@ -1,0 +1,9 @@
+{
+  "name": "Pinterest-Mobify",
+  "version": "1.0.0",
+  "ignore": [
+    "PinterestWidgetsOnTumblr",
+    "**/*.txt",
+    "**/*.md"
+  ]
+}
