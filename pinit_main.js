@@ -289,8 +289,10 @@
 
             // get position, start href
             var p = $.f.getPos(img), href = $.v.endpoint.create;
+            var $img = $(img);
+            var imgSrc = $img.data('orig-src') || img.src;
             // set the button href
-            href = href + 'url=' + encodeURIComponent($.d.URL) + '&media=' + encodeURIComponent(img.src) + '&description=' + encodeURIComponent(img.getAttribute('data-pin-description') || img.title || img.alt || $.d.title);
+            href = href + 'url=' + encodeURIComponent($.d.URL) + '&media=' + encodeURIComponent(imgSrc) + '&description=' + encodeURIComponent(img.getAttribute('data-pin-description') || img.title || img.alt || $.d.title);
 
             $.s.floatingButton = $.f.make({'A': {
               'className': buttonClass,
