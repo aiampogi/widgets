@@ -290,7 +290,7 @@
             // get position, start href
             var p = $.f.getPos(img), href = $.v.endpoint.create;
             var $img = $(img);
-            var imgSrc = $img.data('orig-src') || img.src;
+            var imgSrc = img.attributes['data-orig-src'] || img.src;
             // set the button href
             href = href + 'url=' + encodeURIComponent($.d.URL) + '&media=' + encodeURIComponent(imgSrc) + '&description=' + encodeURIComponent(img.getAttribute('data-pin-description') || img.title || img.alt || $.d.title);
 
