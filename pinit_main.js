@@ -1580,7 +1580,7 @@
   // As a side effect, widget links with bogus domains (e.g. xyz.pinterest.com)
   // will be rendered into widgets.
   'myDomain': /^https?:\/\/(([a-z]{1,3})\.)?pinterest\.com\//,
-  'me': /pinit\.js$/,
+  'me': /pinit\.js\?v\=*/,
   'floatingButtonOffsetTop': 10,
   'floatingButtonOffsetLeft': 10,
   // www.pinterest.com and business.pinterest.com endpoints should be
