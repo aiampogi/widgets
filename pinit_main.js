@@ -1279,32 +1279,32 @@
             link.push(temp[i]);
           }
           // go through all links and look for ours
-          for (i = 0, n = link.length; i < n; i = i + 1) {
-            if (link[i].href && link[i].href.match($.a.myDomain)) {
-              doThis = $.f.getData(link[i], 'do');
+          // for (i = 0, n = link.length; i < n; i = i + 1) {
+          //   if (link[i].href && link[i].href.match($.a.myDomain)) {
+          //     doThis = $.f.getData(link[i], 'do');
 
-              // fix legacy buttons
-              if (!doThis && link[i].href.match(/pin\/create\/button/)) {
-                doThis = 'buttonPin';
-                // assume no count layout given
-                legacyConfig = 'none';
-                // can we find it?
-                legacyLayout = $.f.get(link[i], 'count-layout');
-                // do we have 'vertical' or 'horizontal'?
-                if (legacyLayout && legacyTranslate[legacyLayout]) {
-                  // translate to 'above' or 'beside'
-                  legacyConfig = legacyTranslate[legacyLayout];
-                }
-                // fix the link
-                $.f.set(link[i], 'data-pin-config', legacyConfig);
-              }
+          //     // fix legacy buttons
+          //     if (!doThis && link[i].href.match(/pin\/create\/button/)) {
+          //       doThis = 'buttonPin';
+          //       // assume no count layout given
+          //       legacyConfig = 'none';
+          //       // can we find it?
+          //       legacyLayout = $.f.get(link[i], 'count-layout');
+          //       // do we have 'vertical' or 'horizontal'?
+          //       if (legacyLayout && legacyTranslate[legacyLayout]) {
+          //         // translate to 'above' or 'beside'
+          //         legacyConfig = legacyTranslate[legacyLayout];
+          //       }
+          //       // fix the link
+          //       $.f.set(link[i], 'data-pin-config', legacyConfig);
+          //     }
 
-              if (typeof $.f.render[doThis] === 'function') {
-                link[i].id = $.a.k + '_' + $.f.callback.length;
-                $.f.render[doThis](link[i]);
-              }
-            }
-          }
+          //     if (typeof $.f.render[doThis] === 'function') {
+          //       link[i].id = $.a.k + '_' + $.f.callback.length;
+          //       $.f.render[doThis](link[i]);
+          //     }
+          //   }
+          // }
         },
         config: function () {
           // find and apply configuration requests passed as data attributes on SCRIPT tag
