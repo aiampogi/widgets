@@ -27,4 +27,4 @@
     }, 10);
 
   }
-}(window, document, '//rawgit.com/aiampogi/widgets/master/pinit_main.js'));
+}(window, document, '//' + location.host + '/assets/js/pinit_main.js'));
